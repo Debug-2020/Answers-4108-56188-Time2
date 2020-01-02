@@ -414,7 +414,7 @@ public final class DateMidnight
     public DateMidnight withZoneRetainFields(DateTimeZone newZone) {
         newZone = DateTimeUtils.getZone(newZone);
         DateTimeZone originalZone = DateTimeUtils.getZone(getZone());
-        if (newZone == originalZone) {
+        if (newZone.toString().equals(originalZone.toString())) {
             return this;
         }
         
